@@ -1,0 +1,84 @@
+.landing_wrapper{
+    min-height: 100vh;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: black;
+    color: white;
+    background-image: linear-gradient(to top left , #333,#000);
+    /* flex-wrap: wrap; */
+}
+.landing_info , .link_cont{
+    font-family: 'Ubuntu', sans-serif;
+    padding: 1rem;
+    width: 100%;
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+}
+.landing_info{
+    gap: 1rem;
+}
+
+.landing_info h1{
+    font-size: 4rem;
+}
+.landing_info p{
+    line-height: 1.5rem;
+}
+.link_cont{
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.507);
+    height: 50vh;
+    border: 1px solid cyan;
+    display: flex;    
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+.link_cont .links{
+    text-align: center;
+    padding-bottom: 0.3rem;
+    font-size: 1.5rem;
+}
+
+.link_cont .links a:hover::after{
+    width: 100%;
+}
+.link_cont .links a{
+    color: #fff !important;
+    position: relative;
+    
+}
+.link_cont .links a::after{
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    background: cyan;
+    transition: all 0.3s linear;
+}
+.link_cont .links a:hover{
+    color: cyan !important;
+
+}
+
+.logo{
+    width:40px;
+    position: absolute;
+    top: 3%;
+    left: 1%;
+
+}
+@media screen and (max-width:800px) {
+    .landing_wrapper{
+        flex-direction: column;
+    }
+}
+.body{
+
+    background-color: black;
+}

@@ -1,0 +1,105 @@
+.mt1_wrapper{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #eee;
+    font-size: 0.8rem;
+}
+body{
+    overflow: hidden;
+}
+.mt1_sidebar{
+    padding:2rem 0 2rem 1rem;
+    font-size: 1.2rem;
+    width: 100%;
+    height: 100vh;
+    background: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    font-family: 'Roboto', sans-serif;
+    
+}
+.mt1_sidebar::-webkit-scrollbar{
+    display: none;
+}
+.mt1_sidebar a{
+    border-bottom: #fff;
+    color: #fff;
+    position: relative;
+    align-self: flex-start;
+}
+.mt1_sidebar a::after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 1px;
+    background: #fff;
+    bottom: 0;
+    margin-bottom: -2px;
+    left: 0;
+    transition: all 0.3s linear;
+}
+.mt1_sidebar a:hover::after{
+    width: 100%;
+}
+
+.endpoints{
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.heading h2{
+    color: #000;
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+.headingApi h2{
+    color: #000;
+    font-weight: bolder;
+    font-size: 1.5rem;
+text-shadow: #000;
+}
+
+article{
+    padding:30px;
+}
+#two div:nth-child(3) h1 a{
+    color: rgba(0, 0, 255, 0.705);
+}
+.backbtn{
+    position: absolute;
+    right: 3%;
+    top: 3%;
+    border-radius: 10px;
+    background-color: #333;
+    border: none;
+    padding: 0.5rem 1rem;
+    text-transform: capitalize;
+    color: #fff;
+    border: 2px solid transparent;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.backbtn:hover{
+    color: #333;
+    background-color: #fff;
+    border: 2px solid #333;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+#h2{
+    color:blue;
+}
+.h-100
+{
+    height:100vh
+}
