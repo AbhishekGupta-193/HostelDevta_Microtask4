@@ -1,18 +1,35 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import '../css/MT1.css'
+import menu from '../assests/menu.png'
 export const MT1 = () => {
     const navigate = useNavigate();
     const backHandler = () => {
         navigate('/')
     }
+    
+    const sideBar = useRef();
+    const menu = useRef();
+    const width = document.body.getBoundingClientRect().width;
+    const clickHandler = () => {
+        if(width<=786) sideBar.current.style.transform = 'translateX(-100%)'
+    }
+    const menuHandler = () => {
+        if(width<=786) sideBar.current.style.transform = 'translateX(0%)'
+    }
+
+
+
     return (
         <section >
-            <button className='backbtn' onClick={backHandler}>
-                back
-            </button>
+            <div className="navbar">
+                <i onClick={menuHandler} ref={menu} class="fa-solid fa-bars"></i>
+                <button className='backbtn' onClick={backHandler}>
+                    back
+                </button>
+            </div>
             <div className='grid'>
-                <div className='mt1_sidebar' style={{overflowY:'scroll'}}>
+                <div onClick={clickHandler} ref={sideBar}  className='mt1_sidebar' style={{overflowY:'scroll'}}>
                         <a style={{fontWeight:"bold"}} href="#one">INTRODUCTION</a>
                         <a style={{fontWeight:"bold"}} href="#two">SOURCE CODE</a>
                         <div className="endpoints">

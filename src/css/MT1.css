@@ -6,10 +6,9 @@
     background-color: #eee;
     font-size: 0.8rem;
 }
-body{
-    overflow: hidden;
-}
+
 .mt1_sidebar{
+    z-index: 1;
     padding:2rem 0 2rem 1rem;
     font-size: 1.2rem;
     width: 100%;
@@ -71,10 +70,22 @@ article{
 #two div:nth-child(3) h1 a{
     color: rgba(0, 0, 255, 0.705);
 }
+ 
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 4rem;
+    background: #d9d9d9;
+    align-items: center;
+}
+.navbar i{
+   font-size: 1.2rem;
+}
+
 .backbtn{
-    position: absolute;
-    right: 3%;
-    top: 3%;
     border-radius: 10px;
     background-color: #333;
     border: none;
@@ -102,4 +113,23 @@ article{
 .h-100
 {
     height:100vh
+}
+
+@media screen and (max-width:786px) {
+    .grid{
+        grid-template-columns:100%;
+    }
+    .mt1_sidebar{
+        position: absolute;
+        max-width: 50%;
+        transform: translateX(-100%);
+    }
+
+}
+
+@media screen and (max-width:425px) {
+    .mt1_sidebar{
+        max-width: 100%;
+    }
+
 }
