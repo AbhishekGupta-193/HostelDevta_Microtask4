@@ -31,6 +31,7 @@ export const MT3 = () => {
                         <a style={{ fontWeight: "bold" }}href="#two">SOURCE CODE</a>
                         <a style={{ fontWeight: "bold" }} href="#threee">API ENDPOINTS</a>
                         <a href="#three">Get Address Location</a>  
+                        <a href="#four">Get Lat_Lon Data </a>  
                 </div>
                 <div className='h-100 mt1_wrapper' style={{overflowY:'scroll'}}>
                    
@@ -61,8 +62,35 @@ export const MT3 = () => {
                                 <article id='three'>
                                 <h3>GET Location Address</h3>
                                 <br/>
-                                <h3>Endpoint :'/getLocation/:lat/:lon'</h3>
+                                <h3>Endpoint :'/getLocation/:lat/:lon'</h3>\
+                                <h3>Parameters required :</h3>
+                                <br/>
+                                <ol>
+                                    <li>latitude</li>
+                                    <br/>
+                                    <li>longitude</li>
+                                </ol>
                                 
+
+                        </article>
+                                <article id='four'>
+                                <h3>GET Lat_Lon Data</h3>
+                                <br/>
+                                <h3>Endpoint :'/getLatLon/:pinCode/:city/:district/:state/:country'</h3>
+                                <br/>
+                                <h3>Parameters required :</h3>
+                                <br/>
+                                <ol>
+                                    <li>pinCode</li>
+                                    <br/>
+                                    <li>city</li>
+                                    <br/>
+                                    <li>district</li>
+                                    <br/>
+                                    <li>state</li>
+                                    <br/>
+                                    <li>country</li>
+                                </ol>
 
                         </article>
         
